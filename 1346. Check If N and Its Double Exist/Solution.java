@@ -13,8 +13,10 @@ public class Solution {
 
 		for ( int key : map.keySet() ) {
 
-			if ( key == 0 && map.get(key) > 1 ) {
-				return true;
+			if ( key == 0 ) {
+				if ( map.get(key) > 1 ) {
+					return true;
+				}
 			} else {
 				if ( map.containsKey(key * 2) ) {
 					return true;
